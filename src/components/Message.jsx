@@ -15,7 +15,7 @@ if (msg.role === "user") { // this check the is msg came from user or bot
           : "bg-gray-300 text-black mr-auto" // if bot means apply this style and color
       }`}
     >
-      {msg.content}
+      {msg.content || <span className="italic text-gray-500">...</span>}
     </div>
   );
 }
