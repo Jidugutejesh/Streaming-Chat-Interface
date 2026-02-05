@@ -4,16 +4,11 @@ It dynamically detects and displays text, JSON, numbers, and tables with custom 
 This project demonstrates how to handle streaming HTTP responses, dynamic content rendering, and real-time UI updates in a frontend-only application.
 
 ## Setup Instructions
-1. Clone the repository
-
-git clone https://github.com/Jidugutejesh/Streaming-Chat-Interface.git  
-cd Streaming-Chat-Interface/streaming-chat
-
-2. Install dependencies
+1. Install dependencies
 
 npm install
 
-3. Start the development server
+2. Start the development server
 
 npm run dev
 
