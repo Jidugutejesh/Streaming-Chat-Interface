@@ -69,14 +69,13 @@ export default function ChatWindow() {
            {typing && (    // button to  cancle the streaming fetch and  stop token generating
         <button
           onClick={() => controllerRef.current.abort()}
-          className="text-red-500 text-sm"
+          className="text-red-500 text-sm cursor-pointer"
         >
           Stop
         </button>
 
       )}
       </div>
-   
       <InputBox onSend={sendMessage} />
     </div>
   );

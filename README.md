@@ -1,16 +1,56 @@
-# React + Vite
+# Streaming Chat Interface
+A real-time streaming chat application built with React 18 that connects to a live LLM API (Groq) and renders responses token-by-token.
+It dynamically detects and displays text, JSON, numbers, and tables with custom layouts and styling.
+This project demonstrates how to handle streaming HTTP responses, dynamic content rendering, and real-time UI updates in a frontend-only application.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Setup Instructions
+1. Clone the repository
 
-Currently, two official plugins are available:
+git clone https://github.com/Jidugutejesh/Streaming-Chat-Interface.git  
+cd Streaming-Chat-Interface/streaming-chat
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+2. Install dependencies
 
-## React Compiler
+npm install
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+3. Start the development server
 
-## Expanding the ESLint configuration
+npm run dev
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Open in browser: http://localhost:5173
+
+---
+
+## How to Configure API Key
+1. Create a .env file in the root:
+
+VITE_API_URL=https://api.groq.com/openai/v1/chat/completions  
+VITE_API_KEY=your_groq_api_key_here
+
+2. Restart the dev server.
+
+---
+
+## Features
+- Real-time word-by-word streaming
+- Supports multiple data formats:
+   Plain text
+   Numbers
+   JSON (formatted)
+   Tables
+- Dynamic layouts based on response type
+- Stop generation button
+- Loading indicators
+- Error handling & stream lifecycle states
+- Responsive UI (Tailwind CSS)
+- Message history management
+- Environment-based API key configuration
+
+---
+
+## Challenges Faced
+- Parsing streaming chunks  
+- Detecting data types  
+- Handling abort logic  
+- Managing fast token streams  
+- API errors and CORS issues

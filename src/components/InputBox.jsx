@@ -19,7 +19,7 @@ export default function InputBox({ onSend }) {
       />
       <button
         onClick={handleSend}
-        className="ml-2 bg-blue-500 text-white px-4 rounded hover:bg-blue-600"
+        className="ml-2 bg-blue-500 text-white px-4 rounded hover:bg-blue-600 cursor-pointer" 
       >
         Send
       </button>

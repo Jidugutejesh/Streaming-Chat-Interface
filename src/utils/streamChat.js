@@ -26,7 +26,7 @@ export async function streamChat({
   if (!res.ok) throw new Error("Groq API error");   //if server fails throw error
 
 
-    const reader = res.body.getReader();
+    const reader = res.body.getReader(); // reading the responce
     const decoder = new TextDecoder();       // this lines read the response piece by piece
     let buffer = "";
 
